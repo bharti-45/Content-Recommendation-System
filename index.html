@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movie Recommendations</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Movie Recommendation System</h1>
+      <p>Find movies similar to your favorite one!</p>
+    </header>
+
+    <main>
+      <label for="movieInput" class="input-label">Enter a movie name:</label>
+      <input
+        type="text"
+        id="movieInput"
+        placeholder="Type a movie name here..."
+        autocomplete="off"
+      />
+      <button id="getRecommendationsBtn">Get Recommendations</button>
+
+      <section id="resultSection" class="hidden">
+        <h2>
+          Recommendations for your movie:
+          <span id="selectedMovieName" class="highlight"></span>
+        </h2>
+        <ul id="recommendationsList"></ul>
+      </section>
+
+      <section id="loading" class="hidden">
+        <div class="spinner"></div>
+        <div>Loading recommendations...</div>
+      </section>
+      <section id="error" class="hidden error">No recommendations found. Please try another movie.</section>
+    </main>
+
+    <footer>
+      <small>&copy; 2025 Movie Recommendations by Your Name</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
